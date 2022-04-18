@@ -1,0 +1,249 @@
+steps:
+  V_V_NATION1-1005:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: STG
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 10333
+              stepCounter: 1005
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_NATION1_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6925
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10334
+              stepCounter: 1005
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_NATION_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6926
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10335
+              stepCounter: 1005
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6927
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10336
+              stepCounter: 1005
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6928
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10337
+              stepCounter: 1005
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6929
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10338
+              stepCounter: 1005
+            dataType: VARCHAR(152)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_COMMENT12
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6930
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10339
+              stepCounter: 1005
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6931
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10340
+              stepCounter: 1005
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6932
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10341
+              stepCounter: 1005
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6933
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10342
+              stepCounter: 1005
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6934
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10343
+              stepCounter: 1005
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6935
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10344
+              stepCounter: 1005
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6936
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10345
+              stepCounter: 1005
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6937
+                    stepCounter: "597"
+                transform: ""
+          - columnReference:
+              columnCounter: 10346
+              stepCounter: 1005
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6938
+                    stepCounter: "597"
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: |-
+                {{ stage('Override Create SQL') }} CREATE
+                OR REPLACE VIEW {{ ref('STG', 'V_V_NATION1') }} AS (
+                  SELECT
+                    DIM_NATION1_KEY AS DIM_NATION1_KEY,
+                    DIM_NATION_KEY AS DIM_NATION_KEY,
+                    N_NATIONKEY AS N_NATIONKEY,
+                    N_NAME AS N_NAME,
+                    N_REGIONKEY AS N_REGIONKEY,
+                    N_COMMENT12 AS N_COMMENT12,
+                    HH AS HH,
+                    LH AS LH,
+                    SYSTEM_VERSION AS SYSTEM_VERSION,
+                    SYSTEM_CURRENT_FLAG AS SYSTEM_CURRENT_FLAG,
+                    SYSTEM_START_DATE AS SYSTEM_START_DATE,
+                    SYSTEM_END_DATE AS SYSTEM_END_DATE,
+                    SYSTEM_CREATE_DATE AS SYSTEM_CREATE_DATE,
+                    SYSTEM_UPDATE_DATE AS SYSTEM_UPDATE_DATE
+                  FROM
+                    {{ ref('DEV-TEST', 'V_NATION1') }}
+                )
+            dependencies:
+              - locationName: DEV-TEST
+                nodeName: V_NATION1
+            join:
+              joinCondition: FROM {{ ref('DEV-TEST', 'V_NATION1') }} "V_NATION1"
+            name: V_V_NATION1
+      name: V_V_NATION1
+      overrideSQL: true
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: "1005"

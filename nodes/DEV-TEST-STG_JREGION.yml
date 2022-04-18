@@ -1,0 +1,47 @@
+steps:
+  STG_JREGION-586:
+    operation:
+      database: ""
+      dataset: ""
+      locationID: 4
+      locationName: DEV-TEST
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6802
+              stepCounter: 586
+            config: {}
+            dataType: VARIANT
+            defaultValue: ""
+            description: ""
+            name: REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6803
+              stepCounter: 586
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: HH
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('DEV-TEST', 'STG_JREGION') }}
+      name: STG_JREGION
+      schema: ""
+      sqlType: Source
+      table: STG_JREGION
+      type: sourceInput
+    stepCounter: "586"

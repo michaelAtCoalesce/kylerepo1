@@ -1,0 +1,36 @@
+steps:
+  STG_V_NATION15-971:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: STG
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns: []
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DEV-TEST
+                nodeName: V_NATION1
+            join:
+              joinCondition: FROM {{ ref('DEV-TEST', 'V_NATION1') }} "V_NATION1"
+            name: STG_V_NATION15
+      name: STG_V_NATION15
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "971"

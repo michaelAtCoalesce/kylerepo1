@@ -1,0 +1,232 @@
+steps:
+  STG_V_NATION151-1002:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: STG
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 10283
+              stepCounter: 1002
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_NATION1_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10046
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10284
+              stepCounter: 1002
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DIM_NATION_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10047
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10285
+              stepCounter: 1002
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10048
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10286
+              stepCounter: 1002
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10049
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10287
+              stepCounter: 1002
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_REGIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10050
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10288
+              stepCounter: 1002
+            dataType: VARCHAR(152)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: N_COMMENT12
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10051
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10289
+              stepCounter: 1002
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10052
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10290
+              stepCounter: 1002
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LH
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10053
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10291
+              stepCounter: 1002
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_VERSION
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10054
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10292
+              stepCounter: 1002
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CURRENT_FLAG
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10055
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10293
+              stepCounter: 1002
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_START_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10056
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10294
+              stepCounter: 1002
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_END_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10057
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10295
+              stepCounter: 1002
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10058
+                    stepCounter: "971"
+                transform: ""
+          - columnReference:
+              columnCounter: 10296
+              stepCounter: 1002
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 10059
+                    stepCounter: "971"
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STG
+                nodeName: STG_V_NATION15
+            join:
+              joinCondition: FROM {{ ref('STG', 'STG_V_NATION15') }} "STG_V_NATION15"
+            name: STG_V_NATION151
+      name: STG_V_NATION151
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "1002"
