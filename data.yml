@@ -69,6 +69,36 @@ environments:
         locationName: DEV-TEST
         schema: INFORMATION_SCHEMA
     name: QA
+  TESTTT:
+    createdAt:
+      nanoseconds: 881000000
+      seconds: 1650926151
+    createdBy: xmYgofjOvsfdxvtSsdgq3lZ36xh2
+    description: ""
+    devEnv: false
+    id: 4
+    mappings:
+      "1":
+        database: COALESCE_SAMPLE_DATABASE
+        id: 1
+        locationName: FOO
+        schema: MANY_TABLES
+      "2":
+        database: COALESCE_SAMPLE_DATABASE
+        id: 2
+        locationName: STG
+        schema: MANY_TABLES
+      "3":
+        database: COALESCE_SAMPLE_DATABASE
+        id: 3
+        locationName: SAMPLE
+        schema: TPCH_SF001
+      "4":
+        database: COALESCE_SAMPLE_DATABASE
+        id: 4
+        locationName: DEV-TEST
+        schema: MANY_TABLES
+    name: TESTTT
 jobs:
   Job-1:
     id: 1
